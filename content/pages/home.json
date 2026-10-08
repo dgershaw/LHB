@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "eyebrow": "Lighthouse Brothers Development · Est. 2015",
+    "headline": "Distinctive, thoughtful homes, from start to finish.",
+    "lede": "High-performance luxury homes built throughout the Boston area, with classic New England details and modern sensibilities.",
+    "photos": [
+      "pages/photos/hero-1.jpg",
+      "pages/photos/hero-2.jpg",
+      "pages/photos/hero-3.jpg",
+      "pages/photos/hero-4.jpg"
+    ]
+  },
+  "facts": [
+    {
+      "label": "Building since",
+      "value": "2015"
+    },
+    {
+      "label": "Where",
+      "value": "Burlington, Woburn & beyond"
+    },
+    {
+      "label": "Every home",
+      "value": "Energy-efficient"
+    },
+    {
+      "label": "Two ways in",
+      "value": "Buy, or build custom"
+    }
+  ],
+  "story": {
+    "eyebrow": "Our story",
+    "heading": "Two lifelong friends, one standard for every home.",
+    "paragraphs": [
+      "LHB Development was founded by two lifelong friends, Shawn McSheffrey of Reading, MA, and David Gershaw of Danvers, MA, who first met in high school at St. John’s Prep. Their friendship has been the foundation of the company, built on trust, collaboration, and a shared passion for creating exceptional homes.",
+      "Whether you’re purchasing one of our meticulously crafted homes for sale or partnering with us to design the luxury custom home of your dreams, our mission remains the same: to exceed your highest expectations in every aspect, from design and planning to the final build.",
+      "Since 2015, we’ve assembled a dedicated team of architects, designers, tradespeople, and vendors who share our commitment to quality and excellence. A streamlined process reduces risk, cost, and lead times, so the experience is as seamless as the finished home."
+    ],
+    "photo": "pages/photos/founders.jpg",
+    "caption": "David Gershaw and Shawn McSheffrey",
+    "button": "Meet the founders"
+  },
+  "featured_projects": 6,
+  "cta": {
+    "heading": "Thinking about a new home north of Boston?",
+    "text": "Buy one of ours, or bring us your lot and your ideas. We’d love the opportunity to work with you.",
+    "button": "Get in touch"
+  }
+}

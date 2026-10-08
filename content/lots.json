@@ -1,0 +1,32 @@
+[
+  {
+    "address": "17 Evelyn Street",
+    "town": "Burlington, MA",
+    "status": "available"
+  },
+  {
+    "address": "20 Dolores Drive",
+    "town": "Burlington, MA",
+    "status": "available"
+  },
+  {
+    "address": "4 Glenwood",
+    "town": "Burlington, MA",
+    "status": "available"
+  },
+  {
+    "address": "4 Phylis Drive",
+    "town": "Burlington, MA",
+    "status": "available"
+  },
+  {
+    "address": "64 Marlboro",
+    "town": "Woburn, MA",
+    "status": "available"
+  },
+  {
+    "address": "21 Spring Valley",
+    "town": "Burlington, MA",
+    "status": "sold"
+  }
+]

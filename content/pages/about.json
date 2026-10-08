@@ -1,0 +1,36 @@
+{
+  "heading": "Who we are",
+  "lede": "Distinctive homes that blend classic architectural details with modern sensibilities, fit naturally into their neighborhoods, and are crafted with care and determination.",
+  "people": [
+    {
+      "name": "Shawn McSheffrey",
+      "role": "Co-founder",
+      "photo": "pages/photos/shawn.jpg",
+      "caption": "Shawn with his wife Jenna and LHB mascots “Jimmy Chew” and “Weezy”",
+      "paragraphs": [
+        "My name is Shawn McSheffrey, and I founded LHB Development with David several years ago with a simple yet powerful vision: to create distinctive, thoughtful homes from start to finish.",
+        "In a world filled with cookie-cutter developments, we strive to build homes that stand out: homes that blend classic architectural details with modern sensibilities, fit naturally into their neighborhoods, and are crafted with care and determination.",
+        "As someone who lives where I build, this work is deeply personal. I’ve built a team of dedicated staff and subcontractors who share my passion for excellence. Every day, we approach our work with the commitment to treat each other, our customers, vendors, and neighbors the way we’d want to be treated: kindly, fairly, and with open communication.",
+        "We also care about the future, for both our families and the environment. That’s why we focus on energy efficiency and environmental stewardship in every project we undertake.",
+        "Building a new home is complex, and while we may not always get everything perfect on the first try, it’s never for lack of effort. If you’re considering building or purchasing a new home in the North of Boston area, we’d love the opportunity to work with you."
+      ]
+    },
+    {
+      "name": "David Gershaw",
+      "role": "Co-founder",
+      "photo": "pages/photos/david.jpg",
+      "caption": "David with his mom Jo Ann",
+      "paragraphs": [
+        "My name is David Gershaw, and I founded LHB Development with Shawn.",
+        "I’ve always set high expectations for everything I put my name on. My entrepreneurial journey began in energy-efficient lighting and the medical space, and in 2009, I started a company that develops and manufactures energy-efficient LED lighting for commercial and industrial spaces. This background gave me a strong foundation in innovation and sustainability.",
+        "Over the past few years, I’ve developed a deep passion for design and architecture. What started as a growing interest has turned into one of my biggest passions. I love reading architectural magazines and books, watching all the exciting building shows on TV, and touring beautiful homes and buildings for inspiration. These experiences constantly fuel my creativity and inspire my own projects.",
+        "What excites me most now is the opportunity to blend my knowledge of energy efficiency with my love for beautiful design. I’m driven by the desire to create homes that not only meet my clients’ expectations but far exceed them. It’s this attention to detail and constant evolution of my skills that I believe sets me apart in the development world. My goal is to continue crafting homes that balance sustainability, beauty, and exceptional craftsmanship."
+      ]
+    }
+  ],
+  "cta": {
+    "heading": "Let’s build something distinctive.",
+    "text": "Considering a new home north of Boston? We’d love the opportunity to work with you.",
+    "button": "Get in touch"
+  }
+}
