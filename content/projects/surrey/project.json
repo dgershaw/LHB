@@ -2,5 +2,7 @@
   "name": "Surrey",
   "order": 4,
   "status": "completed",
+  "town": "Woburn, MA",
+  "year": "2023",
   "cover": "001-DUSK.jpg"
 }

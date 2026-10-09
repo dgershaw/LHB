@@ -1,6 +1,8 @@
 {
   "name": "Traverse",
-  "order": 10,
+  "order": 11,
   "status": "completed",
+  "town": "Woburn, MA",
+  "year": "2019",
   "cover": "001-front-porch.webp"
 }

@@ -268,7 +268,7 @@ def gallery_items(info):
 
 
 def project_card(p, depth):
-    meta = p.get('town') or label(p.get('status', 'completed'))
+    meta = ' · '.join(x for x in (p.get('town'), p.get('year')) if x) or label(p.get('status', 'completed'))
     return f'''<a class="card" href="{href(WORK + p['slug'] + '/', depth)}">
   <figure><img loading="lazy" src="{img(p['cover'], depth)}" alt="{e(p['name'])}"></figure>
   <div class="card__row"><h3>{e(p['name'])}</h3><span class="card__meta">{e(meta)}</span></div>
@@ -375,8 +375,10 @@ def build():
         facts = []
         if p.get('address'): facts.append(('Address', p['address']))
         if p.get('town'): facts.append(('Town', p['town']))
+        if p.get('year'): facts.append(('Completed', p['year']))
         if p.get('sqft'): facts.append(('Living area', p['sqft'] + ' sq ft'))
-        facts += [('Status', label(p.get('status', 'completed'))), ('Photos', str(len(p['photos'])))]
+        if not p.get('year'): facts.append(('Status', label(p.get('status', 'completed'))))
+        facts.append(('Photos', str(len(p['photos']))))
         plans = ''.join(f'<figure><img loading="lazy" src="{img(i, 2)}" alt="Floor plan, {e(p["name"])}"></figure>' for i in p['plans'])
         body = f'''<section class="phero"><img src="{img(p['cover'], 2)}" alt="{e(p['name'])}" fetchpriority="high"></section>
 <section class="pinfo wrap"><div><p class="eyebrow"><a href="{href(WORK, 2)}">Our work</a></p><h1>{e(p['name'])}</h1>{paragraphs(p.get('summary', []))}</div>{specs(facts)}</section>

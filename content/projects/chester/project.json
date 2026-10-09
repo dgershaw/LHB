@@ -1,7 +1,8 @@
 {
   "name": "Chester",
-  "order": 11,
+  "order": 10,
   "status": "completed",
   "town": "Woburn, MA",
+  "year": "2020",
   "cover": "001-front.webp"
 }
