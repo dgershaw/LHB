@@ -33,6 +33,7 @@ tools/site.css           the design
   "order": 1,
   "status": "completed",
   "town": "Burlington, MA",
+  "year": "2025",
   "cover": "003-dusk.jpg",
   "summary": ["One or two short paragraphs about the home. Optional."]
 }
@@ -40,7 +41,8 @@ tools/site.css           the design
 
 - `order`: lower numbers show first on the Our Work page; the home page shows the first six.
 - `status`: `completed` or `in-progress`.
-- `town`, `address`, `sqft`, `cover`, `summary` are optional.
+- `year` is the year the home was completed; it shows with the town under the photo.
+- `town`, `year`, `address`, `sqft`, `cover`, `summary` are optional.
 
 **Remove a project:** delete its folder. **Reorder:** change the `order` numbers.
 
