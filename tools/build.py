@@ -82,7 +82,7 @@ for l in LISTINGS:
     if 'address' not in l: fail(f"listings/{l['slug']}/listing.json needs an \"address\"")
 
 STATUS = {'completed': 'Completed', 'in-progress': 'In progress', 'for-sale': 'For sale', 'sold': 'Sold',
-          'coming-soon': 'Coming soon', 'under-agreement': 'Under agreement', 'available': 'Lot available'}
+          'coming-soon': 'Coming soon', 'under-agreement': 'Under agreement', 'pending': 'Pending', 'available': 'Lot available'}
 
 
 def label(s):

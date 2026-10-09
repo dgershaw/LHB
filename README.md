@@ -64,7 +64,7 @@ Same idea under `content/listings/<short-name>/` with `listing.json`:
 ```
 
 - `listing_url` is the broker's live listing; the site links to it from the For Sale page and the home's own page.
-- `status`: `for-sale`, `under-agreement`, `sold` or `coming-soon`. Sold homes stay on the For Sale page with a Sold tag; delete the folder to remove one.
+- `status`: `for-sale`, `pending`, `under-agreement`, `sold` or `coming-soon`. Sold homes stay on the For Sale page with a Sold tag; delete the folder to remove one.
 - A listing with a single photo and no summary gets a card but no page of its own.
 
 Lots are a simple list in `content/lots.json` (`status`: `available` or `sold`).
