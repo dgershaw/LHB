@@ -131,6 +131,7 @@ figcaption{font:400 13px/1.4 var(--mono);color:var(--ink-2);margin-top:10px}
 .foot__meta dt{font:500 11px/1.3 var(--body);letter-spacing:.14em;text-transform:uppercase;opacity:.65}
 .foot__meta dd{margin:0;font-size:15px;overflow-wrap:anywhere}
 .foot a{color:inherit}
+.foot a.btn--light{color:var(--ink)}
 .foot__legal{max-width:1240px;margin:28px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font:400 12px var(--mono);opacity:.6}
 
 /* page head */
@@ -148,6 +149,7 @@ main>.pagehead{padding-block:clamp(28px,4.5vw,56px) clamp(16px,2.5vw,28px)}
 .specs dt{font:500 11px/1.7 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
 .specs dd{margin:0;font:400 15px/1.5 var(--mono);font-variant-numeric:tabular-nums}
 .specs--contact{margin-top:28px}
+.specs a{color:inherit;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 main>.wrap:has(> .g){padding-top:0}
 .g{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .g__cell{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--bg-2)}
