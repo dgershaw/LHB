@@ -443,7 +443,7 @@ def build():
     body = f'''<section class="contact wrap">
   <div class="contact__text"><p class="eyebrow">Contact</p><h1>{e(CONTACT['heading'])}</h1>
   <p class="lede">{e(CONTACT['lede'])}</p>
-  {specs([('Email', SITE['email']), ('Phone', SITE['phone']), ('Area', SITE['area'])]).replace('class="specs"', 'class="specs specs--contact"')}</div>
+  <dl class="specs specs--contact"><div><dt>Email</dt><dd><a href="mailto:{e(SITE['email'])}">{e(SITE['email'])}</a></dd></div><div><dt>Phone</dt><dd><a href="tel:{e(SITE['phone_link'])}">{e(SITE['phone'])}</a></dd></div><div><dt>Area</dt><dd>{e(SITE['area'])}</dd></div></dl></div>
   <form class="form" id="inquiry" novalidate>
     <label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required>
     <label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required>
