@@ -1,0 +1,12 @@
+{
+  "address": "4 Glenwood Street",
+  "town": "Burlington, MA",
+  "order": 1,
+  "status": "for-sale",
+  "sqft": "5,142",
+  "summary": "New construction with five bedrooms, a first-floor guest suite, and a finished lower level. About 3,844 sq ft on the two main floors plus 1,298 sq ft below. Shown as an architect's rendering.",
+  "cover": "001-rendering-front.png",
+  "redirect_from": [
+    "/4glenwood"
+  ]
+}
