@@ -99,8 +99,8 @@ figcaption{font:400 13px/1.4 var(--mono);color:var(--ink-2);margin-top:10px}
 .sale-band .listing .more{color:var(--white)}
 .more--quiet{border-color:var(--rule)}
 .sale-band .listing{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:var(--white)}
-.listing figure{aspect-ratio:4/3;overflow:hidden;background:var(--bg-2)}
-.listing img{width:100%;height:100%;object-fit:cover;display:block}
+.listing figure{overflow:hidden;background:var(--bg-2);align-self:start}
+.listing img{width:100%;height:auto;display:block}
 .listing>div{padding:18px 20px 18px 0;display:flex;flex-direction:column;gap:8px;min-width:0}
 .listing h3{font-size:22px;line-height:1.15;margin:0}
 .listing__town{margin:0;font-size:14px;opacity:.75}
