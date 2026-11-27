@@ -14,7 +14,7 @@ for d, _, files in os.walk(OUT):
         text = open(path, encoding='utf-8').read()
         for ref in re.findall(r'(?:href|src)="([^"#]+)"', text):
             if re.match(r'^(https?:|mailto:|tel:|data:)', ref): continue
-            target = os.path.normpath(os.path.join(d, ref))
+            target = os.path.normpath(os.path.join(d, ref.split("?")[0]))
             if os.path.isdir(target): target = os.path.join(target, 'index.html')
             if not os.path.exists(target):
                 print(f'{os.path.relpath(path, OUT)}: missing {ref}')

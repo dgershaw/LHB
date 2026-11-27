@@ -22,6 +22,8 @@ ARTIFACT = '--artifact' in flags
 MAX_PHOTOS = int(flags[flags.index('--max-photos') + 1]) if '--max-photos' in flags else None
 MAX_WIDTH = int(flags[flags.index('--max-width') + 1]) if '--max-width' in flags else None
 HERE = os.path.dirname(os.path.abspath(__file__))
+import hashlib
+CSS_V = hashlib.sha1(open(os.path.join(HERE, "site.css"), "rb").read()).hexdigest()[:8]  # changes whenever the design changes, so phones fetch the new styles
 e = html.escape
 IMG_EXT = ('.jpg', '.jpeg', '.png', '.webp')
 
@@ -184,7 +186,7 @@ def page(path, title, desc, body, active='', image=None, extra_head=''):
 <link rel="icon" type="image/png" href="{fav}"><link rel="apple-touch-icon" href="{touch}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
-<link rel="stylesheet" href="{r}site.css">{extra_head}'''
+<link rel="stylesheet" href="{r}site.css?v={CSS_V}">{extra_head}'''
     content = f'''<header class="top">
   <a class="mark" href="{href('', depth)}" aria-label="{e(SITE['name'])}, home"><img class="logo" src="{logo}" alt="{e(SITE['short_name'])}" width="85" height="54"></a>
   <nav aria-label="Main">{''.join(links)}</nav>
@@ -233,7 +235,7 @@ def redirect(old, new):
         f'<meta name="robots" content="noindex"></head><body><p>This page has moved to <a href="{e(target)}">{e(target)}</a>.</p></body></html>\n')
 
 
-def gallery(items, depth, alt, total=None):
+def gallery(items, depth, alt, total=None, whole=False):
     cells = []
     for k, rel in enumerate(items):
         u = img(rel, depth)
@@ -241,7 +243,7 @@ def gallery(items, depth, alt, total=None):
     note = ''
     if total and total > len(items):
         note = f'<p class="note">Showing {len(items)} of {total} photos in this preview. The live site shows them all.</p>'
-    return f'''<div class="g">{''.join(cells)}</div>{note}
+    return f'''<div class="g{' g--whole' if whole else ''}">{''.join(cells)}</div>{note}
 <div class="lb" id="lightbox" hidden role="dialog" aria-label="Photo viewer">
   <button class="lb__close" type="button" aria-label="Close">Close</button>
   <button class="lb__prev" type="button" aria-label="Previous photo">&larr;</button>
@@ -414,9 +416,9 @@ def build():
         if l.get('sqft'): facts.append(('Living area', l['sqft'] + ' sq ft'))
         plans = ''.join(f'<figure><img loading="lazy" src="{img(i, 2)}" alt="Floor plan, {e(l["address"])}"></figure>' for i in l['plans'])
         button = f'<a class="btn" href="{e(l["listing_url"])}" target="_blank" rel="noopener">Live listing: pricing &amp; showings</a>' if l.get('listing_url') else ''
-        body = f'''<section class="phero"><img src="{img(l['cover'], 2)}" alt="{e(l['address'])}" fetchpriority="high"></section>
+        body = f'''<section class="phero phero--whole"><img src="{img(l['cover'], 2)}" alt="{e(l['address'])}" fetchpriority="high"></section>
 <section class="pinfo wrap"><div><p class="eyebrow"><a href="{href(SALE, 2)}">For sale</a></p><h1>{e(l['address'])}</h1>{f'<p>{e(l["summary"])}</p>' if l.get('summary') else ''}{button}</div>{specs(facts)}</section>
-<section class="wrap">{gallery(items, 2, l['address'], total)}</section>
+<section class="wrap">{gallery(items, 2, l['address'], total, whole=True)}</section>
 {f'<section class="wrap plans"><p class="eyebrow">Floor plans</p><div class="plans__grid">{plans}</div></section>' if plans else ''}'''
         page(SALE + l['slug'] + '/', f"{l['address']}, {l.get('town', '')} | {SITE['name']}",
              f"{l['address']}, {l.get('town', '')}: a new home by {SITE['name']}. {l.get('summary', '')}".strip(), body, 'sale', image=l['cover'])
